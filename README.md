@@ -209,33 +209,6 @@ npm run dev      # Start development server with nodemon
 npm run seed     # Seed database with sample data
 ```
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Authors
-
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
-
-## 🙏 Acknowledgments
-
-- Next.js team for the amazing framework
-- Tailwind CSS for the utility-first CSS framework
-- React Icons for the comprehensive icon library
-- MongoDB team for the flexible database solution
-
-## 📞 Support
-
-If you have any questions or need help, please open an issue in the repository or contact the development team.
-
----
 
 **Happy Coding! 🚀**
