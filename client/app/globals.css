@@ -65,3 +65,13 @@ a {
     @apply w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg;
   }
 }
+/* Add to your globals.css or component styles */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.profile-page {
+  margin: 0;
+  padding: 0;
+}

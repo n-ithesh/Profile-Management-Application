@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="bg-white shadow-sm border-b border-gray-200 py-2 sm:py-4 mb-6 sm:mb-8">
+    <div className="bg-white shadow-sm border-b border-gray-200 py-2 sm:py-4  sm:mb-8">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* Always row, just resize on small screens */}
         <div className="flex justify-between items-center">
