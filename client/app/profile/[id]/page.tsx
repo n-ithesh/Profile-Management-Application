@@ -96,18 +96,18 @@ export default function ProfileDetails() {
               <Image
                 src="/Assets/Ellipse 9.png"
                 alt="decorative ellipse"
-                width={600}
-                height={100}
-                className="opacity-100 w-40 sm:w-52 md:w-60"
+                width={700}
+                height={300}
+                className="opacity-100 w-50 sm:w-52 md:w-60"
               />
             </div>
             {/* Avatar container */}
-            <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg overflow-hidden relative z-10">
+            <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-full border-4 border-white shadow-lg overflow-hidden relative z-10">
               <Image
                 src={DEFAULT_AVATAR}
                 alt="avatar"
-                width={128}
-                height={128}
+                width={600}
+                height={600}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -228,7 +228,7 @@ export default function ProfileDetails() {
               alt="FinEasy Case Study"
               width={300}
               height={200}
-              className="w-full h-auto rounded-lg object-cover shadow-md transition-shadow"
+              className="w-full h-76 rounded-xl object-cover shadow-md transition-shadow"
             />
             <div className="mt-3 sm:mt-4 font-bold text-base sm:text-lg md:text-2xl">
               FinEasy Case Study
@@ -297,7 +297,7 @@ export default function ProfileDetails() {
       <div className="mt-16 sm:mt-20 bg-gray-100 w-full py-12 sm:py-16">
         <div className="w-full px-4">
           <div
-            className="rounded-2xl p-6 sm:p-8 md:p-12 text-center mb-6 sm:mb-8 shadow-2xl max-w-4xl mx-auto relative overflow-hidden"
+            className="rounded-2xl p-6  sm:p-8 md:p-12 text-center mb-6 sm:mb-8 shadow-2xl max-w-4xl mx-auto relative overflow-hidden"
             style={{
               backgroundImage: "url('/Assets/header-bg.png')",
               backgroundSize: "cover",
@@ -354,7 +354,7 @@ export default function ProfileDetails() {
           <div className="border-2 border-gray-300 my-6 sm:my-8 max-w-4xl mx-auto"></div>
 
           <div className="text-center text-xs sm:text-sm md:text-base text-gray-600 max-w-4xl mx-auto">
-            <p>© 2024 MAHE B'LRU</p>
+          <p>© 2024 MAHE B&apos;LRU</p>
           </div>
         </div>
       </div>
