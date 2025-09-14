@@ -22,12 +22,13 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 import PostRoute from "./router/post.route.js";
 app.use("/api/v1", PostRoute);
-app.get('/',(res,req)=>{
+app.get('/', (req, res) => {
   res.send({
-    activeStatus:true,
-    error:false,
-  })
-})
+    activeStatus: true,
+    error: false,
+  });
+});
+
 
 // Start server
 app.listen(8000, () => {
