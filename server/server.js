@@ -10,7 +10,7 @@ const app = express();
 // DB connection
 connectWithMongoose();
 
-// ✅ CORS setup (must be before routes)
+//  CORS setup (must be before routes)
 const allowedOrigins = [
   "http://localhost:3000",
   "https://profilemanagementapplication.netlify.app"
