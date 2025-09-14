@@ -28,12 +28,13 @@ export default function ProfileDetails() {
   const [profile, setProfile] = useState<Profile>();
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+   const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     const fetchProfile = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8000/api/v1/getsinglepost?postID=${id}`
+          `${BACKEND_URL}/getsinglepost?postID=${id}`
         );
         setProfile(res.data.responseData || {});
       } catch (err) {

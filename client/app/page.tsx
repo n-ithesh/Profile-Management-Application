@@ -20,11 +20,12 @@ const DEFAULT_AVATAR = "/Assets/avatar.png";
 export default function HomePage() {
   const [profiles, setProfiles] = useState<Profile[]>([]);
   const [loading, setLoading] = useState(true);
+  const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     const fetchProfiles = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/v1/getallpost");
+        const res = await axios.get(`${BACKEND_URL}/getallpost`);
         setProfiles(res.data.responseData || []);
       } catch (err) {
         console.error(err);

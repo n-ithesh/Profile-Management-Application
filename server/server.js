@@ -12,10 +12,14 @@ connectWithMongoose();
 
 // Middlewares
 app.use(cors({
-  origin: "http://localhost:3000", // frontend
+  origin: [
+    "http://localhost:3000",                
+    "https://your-site-name.netlify.app"    
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
+  credentials: true
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -31,6 +35,7 @@ app.get('/', (req, res) => {
 
 
 // Start server
-app.listen(8000, () => {
-  console.log(" Server is running on http://localhost:8000");
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
