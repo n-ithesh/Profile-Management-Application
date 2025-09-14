@@ -28,7 +28,7 @@ export default function ProfileDetails() {
   const [profile, setProfile] = useState<Profile>();
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-   const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL;
+  const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -64,46 +64,55 @@ export default function ProfileDetails() {
 
       {/* Header */}
       <div
-        className="relative w-full h-[160px] sm:h-[200px] md:h-[240px] lg:h-[280px] bg-cover bg-center bg-no-repeat"
+        className="relative w-full h-[160px] sm:h-[200px] md:h-[240px] lg:h-[280px] xl:h-[320px] bg-cover bg-center bg-no-repeat pb-16 sm:pb-0"
         style={{ backgroundImage: "url('/Assets/header-bg.png')" }}
       >
-        <div className="absolute left-4 right-4 sm:left-10 sm:right-10 bottom-4 flex flex-col sm:flex-row items-center justify-between gap-4 px-4 sm:px-6 text-white">
-          {/* Contact */}
-          <div className="flex gap-4 sm:gap-6 md:gap-9">
-            <button className="flex items-center gap-2 hover:underline text-xs sm:text-sm md:text-base">
-              <FaEnvelope className="h-4 w-4" />
-              Email
+        <div className="absolute left-4 right-4 sm:left-10 sm:right-10 bottom-4 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6 md:gap-8 px-2 sm:px-6 text-white">
+
+          {/* Contact Buttons */}
+          <div className="flex flex-wrap gap-2 sm:gap-4 md:gap-6">
+            {/* Email Button */}
+            <button className="flex items-center gap-1.5 sm:gap-2 md:gap-3 text-xs sm:text-sm md:text-base hover:underline transition">
+              <FaEnvelope className="h-3 w-3 sm:h-3 sm:w-4 md:h-5 md:w-5" />
+              <span className="truncate">Email</span>
             </button>
-            <button className="flex items-center gap-2 hover:underline text-xs sm:text-sm md:text-base">
-              <FaPhone className="h-4 w-4 rotate-90" />
-              Phone
+
+            {/* Phone Button */}
+            <button className="flex items-center gap-1.5 sm:gap-1 md:gap-3 text-xs sm:text-sm md:text-base hover:underline transition">
+              <FaPhone className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 rotate-90" />
+              <span className="truncate">Phone</span>
             </button>
           </div>
-          {/* Download Resume */}
-          <button className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm md:text-base rounded-full bg-white/10 backdrop-blur-sm text-white font-medium border border-white/50 shadow hover:shadow-md hover:bg-white/20 transition">
-            <FaDownload className="h-4 w-4 text-white" />
+
+          {/* Download Resume Button */}
+          <button className="flex items-center gap-1.5 sm:gap-2 md:gap-3 px-2 sm:px-4 md:px-5 py-1 sm:py-2 md:py-2.5 text-xs sm:text-sm md:text-base rounded-full bg-white/10 backdrop-blur-sm text-white font-medium border border-white/50 shadow hover:shadow-md hover:bg-white/20 transition">
+            <FaDownload className="h-1 w-3 sm:h-1 sm:w-4 md:h-5 md:w-5 text-white" />
             Download My Resume
           </button>
+
         </div>
       </div>
+
+
 
       {/* Profile Section */}
       <div className="max-w-3xl mx-auto px-4">
         <div className="profile-info-section">
-          {/* Avatar */}
-          <div className="relative -mt-16 sm:-mt-20 md:-mt-24 flex justify-center">
-            {/* Ellipse */}
-            <div className="absolute -top-6 sm:-top-8 left-1/2 -translate-x-1/2 z-0">
+          {/* Avatar Section */}
+          <div className="relative -mt-14 sm:-mt-20 md:-mt-24 flex justify-center">
+            {/* Decorative Ellipse */}
+            <div className="absolute -top-5 sm:-top-8 left-1/2 -translate-x-1/2 z-0">
               <Image
                 src="/Assets/Ellipse 9.png"
                 alt="decorative ellipse"
                 width={700}
                 height={300}
-                className="opacity-100 w-50 sm:w-52 md:w-60"
+                className="opacity-100 w-40 sm:w-52 md:w-50 lg:w-65"
               />
             </div>
-            {/* Avatar container */}
-            <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-full border-4 border-white shadow-lg overflow-hidden relative z-10">
+
+            {/* Avatar */}
+            <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full border-4 border-white shadow-lg overflow-hidden relative z-10">
               <Image
                 src={DEFAULT_AVATAR}
                 alt="avatar"
@@ -116,23 +125,24 @@ export default function ProfileDetails() {
 
           {/* Name, Gender, Pronouns */}
           <div className="text-center mt-4">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
+            <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
               {profile.name}
             </h2>
-            <p className="text-xs sm:text-sm md:text-base text-gray-600 font-semibold">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 font-semibold">
               {profile.gender} | {profile.age} | {profile.pronouns}
             </p>
           </div>
 
           {/* Watch Resume Button */}
           <div className="flex justify-center mt-5 sm:mt-6 md:mt-8">
-            <button className="flex items-center text-xs sm:text-sm md:text-base gap-2 px-3 sm:px-5 py-1.5 sm:py-2 rounded-full bg-orange-500 text-white font-medium shadow hover:bg-orange-600 transition">
-              <FaPlay className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5" />
+            <button className="flex items-center text-xs sm:text-sm md:text-base lg:text-lg gap-2 px-3 sm:px-5 md:px-6 py-1.5 sm:py-2 md:py-2.5 rounded-full bg-orange-500 text-white font-medium shadow hover:bg-orange-600 transition">
+              <FaPlay className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
               Watch my Visual Resume Now
             </button>
           </div>
         </div>
       </div>
+
 
       <div className="content-section px-4">
         {/* Tabs */}
@@ -355,7 +365,7 @@ export default function ProfileDetails() {
           <div className="border-2 border-gray-300 my-6 sm:my-8 max-w-4xl mx-auto"></div>
 
           <div className="text-center text-xs sm:text-sm md:text-base text-gray-600 max-w-4xl mx-auto">
-          <p>© 2024 MAHE B&apos;LRU</p>
+            <p>© 2024 MAHE B&apos;LRU</p>
           </div>
         </div>
       </div>
