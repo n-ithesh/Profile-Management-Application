@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "@netlify/plugin-nextjs": "^5.13.2",
     "@tailwindcss/postcss": "^4.1.13",
     "axios": "^1.12.1",
     "next": "15.5.3",
@@ -22,6 +21,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@netlify/plugin-nextjs": "^5.13.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
