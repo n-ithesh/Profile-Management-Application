@@ -14,7 +14,7 @@ connectWithMongoose();
 app.use(cors({
   origin: [
     "http://localhost:3000",                
-    "https://your-site-name.netlify.app"    
+    "https://profilemanagementapplication.netlify.app/"    
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
