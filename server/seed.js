@@ -12,7 +12,7 @@ const seedProfiles = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("✅ Connected to MongoDB");
+    console.log(" Connected to MongoDB");
 
     // Sample data (10+ profiles with detailed bios)
     const profiles = [
@@ -97,15 +97,15 @@ const seedProfiles = async () => {
 
     // Clear existing data
     await ProfileModel.deleteMany();
-    console.log("🧹 Cleared old profiles");
+    console.log(" Cleared old profiles");
 
     // Insert new data
     await ProfileModel.insertMany(profiles);
-    console.log("✅ Profiles seeded successfully");
+    console.log("Profiles seeded successfully");
 
     process.exit(0);
   } catch (error) {
-    console.error("❌ Seeding failed:", error.message);
+    console.error(" Seeding failed:", error.message);
     process.exit(1);
   }
 };
