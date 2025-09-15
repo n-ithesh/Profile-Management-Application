@@ -10,7 +10,7 @@ const app = express();
 // DB connection
 connectWithMongoose();
 
-//  CORS setup (must be before routes)
+//  CORS setup 
 const allowedOrigins = [
   "http://localhost:3000",
   "https://profilemanagementapplication.netlify.app"
@@ -47,10 +47,11 @@ app.get("/", (req, res) => {
 
 // Start server (only in dev, Vercel handles prod)
 const PORT = process.env.PORT || 8000;
+
 if (process.env.NODE_ENV !== "production") {
   app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
   });
 }
 
-export default app; // 
+export default app;  
